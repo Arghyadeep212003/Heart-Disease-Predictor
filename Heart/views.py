@@ -3,10 +3,10 @@ from django.conf import settings
 import os
 import pickle
 import sklearn
+import joblib
 
-model_path = os.path.join(settings.BASE_DIR, "model.pkl")
-with open(model_path, "rb") as file:
-    model = pickle.load(file)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
 
 def home(request):
     pred_message = None
@@ -35,5 +35,6 @@ def home(request):
     context = {
         "prediction": pred_message
     }
+
 
     return render(request, "index1.html", context)
