@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-m1!%e@fmk5vtl0+q1%1@*1r8dc%$g4b2vm#os_x6ch3ece6-==
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['heart-disease-predictor-7e9y.onrender.com']
+ALLOWED_HOSTS = ['heart-disease-predictor-7e9y.onrender.com','www.heart-disease-predictor-7e9y.onrender.com',]
 
 
 # Application definition
@@ -121,5 +121,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
